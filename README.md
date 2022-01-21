@@ -1,25 +1,30 @@
----
-languages:
-- php
-page_type: sample
-description: "This is a sample application that you can use to follow along with the Build a PHP and MySQL web app in Azure tutorial."
-products:
-- azure
-- azure-app-service
----
+# Laravel failing with missing SQL Driver in Azure App Service
 
-# Laravel sample for Azure App Service
+I worked on Laravel framework when the customer was seen an error as mentioned below.<br>
+The customer used PHP/7.4 and the App was connecting to DB.  <br>
+However, the issue was seen because of missing DB driver.<br>
+The customer used GitHub Action for building & deploying.<br>
 
-This is a sample application that you can use to follow along with the tutorial at 
-[Build a PHP and MySQL web app in Azure](https://docs.microsoft.com/azure/app-service-web/app-service-web-tutorial-php-mysql). 
+Error: <br>
 
-This sample application is taken from the official [Laravel sample task list application](https://github.com/laravel/quickstart-basic) and modified minimally to make it work with Azure App Service. For instructions on how to use Laravel, see the official repository. 
-
-## License
-
-See [LICENSE](https://github.com/Azure-Samples/laravel-tasks/blob/master/LICENSE).
-
-## Contributing
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+ > Illuminate\Foundation\ComposerScripts::postAutoloadDump<br>
+  > @php artisan package:discover --ansi<br>
+    
+   Illuminate\Database\QueryException <br>
   
+ could not find driver (SQL: select * from information_schema.tables where table_schema = hiring and table_name = app_types and table_type = 'BASE TABLE')<br>
+    
+   at vendor/laravel/framework/src/Illuminate/Database/Connection.php:703<br>
+       699â–•         // If an exception occurs when attempting to run a query, we'll format the error<br>
+      700â–•         // message to include the bindings with SQL, which will make this exception a<br>
+      701â–•         // lot more helpful to the developer instead of just the database's errors.<br>
+       702â–•         catch (Exception $e) {<br>
+      âžœ 703â–•             throw new QueryException(<br>
+        704â–•                 $query, $this->prepareBindings($bindings), $e<br>
+        705â–•             );<br>
+        706â–•         }<br>
+        707â–•     }<br>
+    
+    1   [internal]:0<br>
+         Illuminate\Foundation\Application::Illuminate\Foundation\{closure}(Object(App\Providers\AppServiceProvider))<br>
+   
