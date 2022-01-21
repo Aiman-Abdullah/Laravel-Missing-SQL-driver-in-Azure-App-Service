@@ -26,5 +26,14 @@ Error: <br>
         707â–•     }<br>
     
     1   [internal]:0<br>
-         Illuminate\Foundation\Application::Illuminate\Foundation\{closure}(Object(App\Providers\AppServiceProvider))<br>
+         Illuminate\Foundation\Application::Illuminate\Foundation\{closure}(Object(App\Providers\AppServiceProvider))<br><br>
    
+
+
+Resolution: <br>
+The resolution to the issue was added into workflow/ .yaml file the extensions: Please, see workflow/.yaml for more details <br>
+ extensions: mbstring,PDO,grpc,tokenizer,xml,json,ctype,fileinfo,openssl,bcmath,mysql<br>
+ 
+ 
+ 
+
