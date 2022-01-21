@@ -34,7 +34,7 @@ Resolution: <br>
 The resolution to the issue was added into workflow/ .yaml file the extensions:( see workflow/.yaml for more details ) <br>
  extensions: mbstring,PDO,grpc,tokenizer,xml,json,ctype,fileinfo,openssl,bcmath,mysql<br>
  
- NOTE: Change DB setting from .env.example
+ NOTE: You can change DB setting from .env.example file
  
  
 
