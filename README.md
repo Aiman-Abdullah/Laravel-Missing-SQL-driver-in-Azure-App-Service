@@ -25,7 +25,7 @@ Error: <br>
         706â–•         }<br>
         707â–•     }<br>
     
-    1   [internal]:0<br>
+    1   [internal]:0
          Illuminate\Foundation\Application::Illuminate\Foundation\{closure}(Object(App\Providers\AppServiceProvider))
    
 
