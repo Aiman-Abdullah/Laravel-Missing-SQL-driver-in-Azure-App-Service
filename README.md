@@ -31,7 +31,8 @@ Error: <br>
 
 
 Resolution: <br>
-The resolution to the issue was added into workflow/ .yaml file the extensions:( see workflow/.yaml for more details ) <br>
+The resolution to the issue was added into workflow/.yaml file the below:( see workflow/.yaml for more details ) <br>
+ tools: composer, phpunit<br>
  extensions: mbstring,PDO,grpc,tokenizer,xml,json,ctype,fileinfo,openssl,bcmath,mysql<br>
  
  NOTE: You can change DB setting from .env.example file
