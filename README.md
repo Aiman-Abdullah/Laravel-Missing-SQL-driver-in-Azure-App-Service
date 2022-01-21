@@ -26,7 +26,7 @@ Error: <br>
         707â–•     }<br>
     
     1   [internal]:0<br>
-         Illuminate\Foundation\Application::Illuminate\Foundation\{closure}(Object(App\Providers\AppServiceProvider))<br><br>
+         Illuminate\Foundation\Application::Illuminate\Foundation\{closure}(Object(App\Providers\AppServiceProvider))
    
 
 
